@@ -2,6 +2,7 @@ import "./App.css";
 import Sidebar from "./assets/components/Sidebar";
 import BarraDePesquisa from "./assets/components/BarraDePesquisa";
 import Filtro from "./assets/components/Filtro";
+import Ordenacao from "./assets/components/Ordenação";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div>
         <BarraDePesquisa />
         <Filtro />
+        <Ordenacao />
       </div>
     </div>
   );

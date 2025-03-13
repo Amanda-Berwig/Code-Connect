@@ -1,0 +1,18 @@
+.container-ordenacao {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+}
+
+.container-ordenacao button {
+    font-size: 22px;
+    background-color: transparent;
+    color: var(--cinza-medio);
+    border: none;
+}
+
+.container-ordenacao .button_destaque {
+    color: var(--verde-destaque);
+    text-decoration: underline;
+}
