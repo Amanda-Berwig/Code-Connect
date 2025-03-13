@@ -1,12 +1,16 @@
 import "./App.css";
 import Sidebar from "./assets/components/Sidebar";
 import BarraDePesquisa from "./assets/components/BarraDePesquisa";
+import Filtro from "./assets/components/Filtro";
 
 function App() {
   return (
     <div className="container">
       <Sidebar />
-      <BarraDePesquisa />
+      <div>
+        <BarraDePesquisa />
+        <Filtro />
+      </div>
     </div>
   );
 }
