@@ -3,7 +3,7 @@
     text-decoration: none;
     background-color: var(--cinza-escuro);
     border-radius: 8px;
-    width: 50%;
+    width: 100%;
     margin-top: 32px;
     display: grid;
 }
