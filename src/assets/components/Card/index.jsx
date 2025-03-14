@@ -1,4 +1,4 @@
-import Capa from "./assets/capaa.svg";
+import Capa from "./assets/capa.png";
 import Code from "./assets/code.svg";
 import Chat from "./assets/chat.svg";
 import Share from "./assets/share.svg";
