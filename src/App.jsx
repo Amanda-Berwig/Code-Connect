@@ -6,8 +6,11 @@ import Ordenacao from "./assets/components/Ordenação";
 import Card from "./assets/components/Card";
 import { useEffect, useState } from "react";
 
+const tagsEstaticas = ["programacao", "frontend", "html", "css", "javascript"];
+
 function App() {
   const [dados, setDados] = useState([]);
+  const [tagsSelecionadas, setTagsSelecionadas] = useState([]); // Estado das tags escolhidas
   useEffect(() => {
     // Faz uma requisição para a API usando fetch()
     fetch(
@@ -20,40 +23,42 @@ function App() {
       .then((dados) => setDados(dados));
   }, []); // O array vazio [] garante que o useEffect execute apenas uma vez, quando o componente for montado
 
+  const dadosFiltrados = tagsSelecionadas.length
+    ? dados.filter((post) =>
+        tagsSelecionadas.every((tag) => post.tags.includes(tag))
+      )
+    : dados;
+
   return (
     <div className="container">
       <Sidebar />
       <div>
         <BarraDePesquisa />
-        <Filtro />
+        <Filtro
+          tags={tagsEstaticas}
+          tagsSelecionadas={tagsSelecionadas}
+          setTagsSelecionadas={setTagsSelecionadas}
+        />
         <Ordenacao />
         <ul className="lista__cards">
-          {/* Cria uma lista <ul> com a classe CSS "lista__cards" para estilização */}
-
-          {
-            dados // Verifica se "dados" contém informações
-              ? dados.map((item, index) => (
-                  /* Se "dados" existir, percorre a lista com .map() */
-
-                  <li key={index}>
-                    {/* Cria um item de lista <li> para cada elemento de "dados" */}
-                    {/* Atributo "key" ajuda o React a identificar cada item de forma única */}
-                    <Card
-                      id={item.id}
-                      imagemUrl={item.imagem_capa}
-                      titulo={item.titulo}
-                      resumo={item.resumo}
-                      linhasDeCodigo={item.linhas_de_codigo}
-                      compartilhamentos={item.compartilhamentos}
-                      comentarios={item.comentarios}
-                      usuario={item.usuario}
-                    />
-                    {/* Enviando props para o */}
-                    {/* Renderiza o componente <Card/> dentro do <li> */}
-                  </li>
-                ))
-              : null // Se "dados" for null ou undefined, não exibe nada
-          }
+          {dadosFiltrados.length > 0 ? (
+            dadosFiltrados.map((item, index) => (
+              <li key={index}>
+                <Card
+                  id={item.id}
+                  imagemUrl={item.imagem_capa}
+                  titulo={item.titulo}
+                  resumo={item.resumo}
+                  linhasDeCodigo={item.linhas_de_codigo}
+                  compartilhamentos={item.compartilhamentos}
+                  comentarios={item.comentarios}
+                  usuario={item.usuario}
+                />
+              </li>
+            ))
+          ) : (
+            <p>Nenhum post encontrado.</p>
+          )}
         </ul>
       </div>
     </div>

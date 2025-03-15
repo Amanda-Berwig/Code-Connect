@@ -4,6 +4,13 @@
     margin-top: 1em;
 }
 
+.container-filtro ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+
+}
+
 .container-filtro ul li {
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
@@ -11,12 +18,22 @@
     font-size: 18px;
     padding: 0.25em 0.5em;
     border-radius: 4px;
+    cursor: pointer;
+    /* Torna as tags clicáveis */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.container-filtro ul {
-    list-style-type: none;
-    display: flex;
-    gap: 10px;
+/* Quando o usuário passa o mouse por cima */
+.container-filtro ul li:hover {
+    background-color: var(--cinza-medio);
+    color: white;
+}
+
+/* Estilo para quando a tag estiver selecionada */
+.container-filtro ul li.selecionada {
+    background-color: var(--azul);
+    color: white;
+    font-weight: bold;
 }
 
 .container-filtro button {
@@ -24,4 +41,11 @@
     background-color: transparent;
     color: var(--cinza-medio);
     font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover para o botão */
+.container-filtro button:hover {
+    color: var(--cinza-escuro);
 }
