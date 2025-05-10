@@ -46,7 +46,9 @@ Você pode visualizar o layout do projeto neste link:
 
 ```bash
 git clone https://github.com/seu-usuario/codeconnect.git
+
 cd codeconnect
+
 Instale as dependências:
 
 npm install
