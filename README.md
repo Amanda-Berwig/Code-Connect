@@ -1,12 +1,57 @@
-# React + Vite
+Projeto desenvolvido durante o curso da Alura **"React: configurando e estruturando projetos com Vite"**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧠 Sobre o projeto
 
-Currently, two official plugins are available:
+**CodeConnect** é uma rede social para pessoas desenvolvedoras compartilharem seus projetos e trechos de código, possibilitando a interação por meio de comentários e compartilhamentos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Atualmente, o foco está na construção da **tela de feed** da aplicação, com os seguintes elementos visuais:
 
-## Expanding the ESLint configuration
+- Menu de navegação
+- Barra de pesquisa
+- Filtros
+- Ordenação
+- Cards de postagens
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> ⚠️ Todos os elementos implementados até o momento são apenas visuais e não possuem funcionalidades dinâmicas.
+
+## 🔨 Funcionalidades implementadas
+
+- Estruturação inicial com Vite
+- Tela de feed com:
+  - Menu lateral
+  - Campo de busca
+  - Filtros e ordenação
+  - Cards de postagens
+
+## ✔️ Tecnologias e técnicas utilizadas
+
+- React
+- JavaScript
+- CSS
+- Vite
+- Hooks (`useState`, `useEffect`)
+- Props
+- Fetch API (configuração)
+- Componentização
+- Figma como base do layout
+
+## 🎨 Layout (Figma)
+
+Você pode visualizar o layout do projeto neste link:  
+[👉 Acessar o Figma](https://www.figma.com/design/SASyBm2k3IlqrO8qI1Otg1/React--constru%C3%ADndo-componentes-com-JSX-%7C-CodeConnect?node-id=201-4085)
+
+## 🛠️ Como rodar o projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/codeconnect.git
+cd codeconnect
+Instale as dependências:
+
+npm install
+
+npm run dev
+
+Acesse em seu navegador:
+http://localhost:5173
