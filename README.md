@@ -12,7 +12,6 @@ Atualmente, o foco está na construção da **tela de feed** da aplicação, com
 - Ordenação
 - Cards de postagens
 
-> ⚠️ Todos os elementos implementados até o momento são apenas visuais e não possuem funcionalidades dinâmicas.
 
 ## 🔨 Funcionalidades implementadas
 
@@ -20,8 +19,9 @@ Atualmente, o foco está na construção da **tela de feed** da aplicação, com
 - Tela de feed com:
   - Menu lateral
   - Campo de busca
-  - Filtros e ordenação
+  - Filtros e ordenação conforme tags
   - Cards de postagens
+  - 
 
 ## ✔️ Tecnologias e técnicas utilizadas
 
